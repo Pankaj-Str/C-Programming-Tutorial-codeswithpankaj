@@ -4,16 +4,12 @@ C is a powerful general-purpose programming language. It can be used to develop 
 
 
 ### C Introduction
-
-<<<<<<< HEAD
-    1. Keywords & Identifier
-    2. Variables & Constants
-    3. C Data Types
-=======
     Keywords & Identifier
     Variables & Constants
     C Data Types
->>>>>>> b46499082b2326702ca6fbb675b81c79c9c22bb9
+    Keywords & Identifier
+    Variables & Constants
+    C Data Types
     4. C Input/Output
     C Operators
     C Introduction Examples
@@ -77,8 +73,3 @@ C is a powerful general-purpose programming language. It can be used to develop 
     C Standard Library
     C Programming Examples
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> b46499082b2326702ca6fbb675b81c79c9c22bb9
