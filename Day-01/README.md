@@ -3,38 +3,38 @@
 ----------------
 ## keywords used in the C programming language:
 
-1. auto: Specifies automatic storage class for local variables.
-2. break: Terminates the execution of a loop or switch statement.
-3. case: Defines a branch in a switch statement.
-4. char: Declares a character variable or data type.
-5. const: Specifies that a variable's value cannot be changed.
-6. continue: Skips the current iteration of a loop and moves to the next iteration.
-7. default: Defines a default branch in a switch statement.
+1. **auto:** Specifies automatic storage class for local variables.
+2. **break:** Terminates the execution of a loop or switch statement.
+3. **case:** Defines a branch in a switch statement.
+4. **char:** Declares a character variable or data type.
+5. **const:** Specifies that a variable's value cannot be changed.
+6. **continue:** Skips the current iteration of a loop and moves to the next iteration.
+7. **default:** Defines a default branch in a switch statement.
 8. do: Starts a do-while loop.
-9. double: Declares a double-precision floating-point variable or data type.
-10. else: Defines an alternative branch in an if-else statement.
-11. enum: Declares an enumeration type.
-12. extern: Declares a variable or function as being defined externally.
-13. float: Declares a floating-point variable or data type.
-14. for: Starts a for loop.
-15. goto: Transfers control to a labeled statement.
-16. if: Starts an if statement.
-17. int: Declares an integer variable or data type.
-18. long: Declares a long integer variable or data type.
-19. register: Declares a variable to be stored in a CPU register.
-20. return: Exits a function and returns a value.
-21. short: Declares a short integer variable or data type.
-22. signed: Declares a signed integer variable or data type.
-23. sizeof: Returns the size of a data type or variable.
-24. static: Specifies that a variable retains its value between function calls.
-25. struct: Defines a structure type.
-26. switch: Starts a switch statement.
-27. typedef: Creates a new type alias.
-28. union: Defines a union type.
-29. unsigned: Declares an unsigned integer variable or data type.
-30. void: Specifies an empty or no type.
-31. volatile: Specifies that a variable can be modified externally.
-32. while: Starts a while loop.
+9. **double:** Declares a double-precision floating-point variable or data type.
+10. **else:** Defines an alternative branch in an if-else statement.
+11. **enum:** Declares an enumeration type.
+12. **extern:** Declares a variable or function as being defined externally.
+13. **float:** Declares a floating-point variable or data type.
+14. **for:** Starts a for loop.
+15. **goto:** Transfers control to a labeled statement.
+16. **if:** Starts an if statement.
+17. **int:** Declares an integer variable or data type.
+18. **long:** Declares a long integer variable or data type.
+19. **register:** Declares a variable to be stored in a CPU register.
+20. **return:** Exits a function and returns a value.
+21. **short:** Declares a short integer variable or data type.
+22. **signed:** Declares a signed integer variable or data type.
+23. **sizeof:** Returns the size of a data type or variable.
+24. **static:** Specifies that a variable retains its value between function calls.
+25. **struct:** Defines a structure type.
+26. **switch:** Starts a switch statement.
+27. **typedef:** Creates a new type alias.
+28. **union:** Defines a union type.
+29. **unsigned:** Declares an unsigned integer variable or data type.
+30. **void:** Specifies an empty or no type.
+31. **volatile:** Specifies that a variable can be modified externally.
+32.** while:** Starts a while loop.
 -------------
 # Identifier
 
