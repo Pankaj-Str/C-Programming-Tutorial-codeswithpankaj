@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+//www.p4n.in
+//www.codeswithpankaj.com
 int main(void)
 {
   //initialize vars
