@@ -13,6 +13,6 @@ int main() {
     printf("Pi: %.5f\n", PI);
     printf("Min Value: %d\n", MIN_VALUE);
     printf("New Line: %c", NEW_LINE);
-    
+  
     return 0;
 }
