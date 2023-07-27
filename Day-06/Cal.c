@@ -12,7 +12,6 @@ int main()
     printf("Enter number 2 ");
     scanf("%d",&n2);
     
-    
 
     
     int result;
