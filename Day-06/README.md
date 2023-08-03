@@ -1,16 +1,14 @@
-## Assignment 6
-Prompt the user for a Numerator (top number of a fraction) and a Denominator (bottom number of a fraction). Tell the user whether or not there is a remainder using `if` control flow.
+## Assignment 
 
-## Example Output
-```terminal_session
-p4n:~/LearningC/ # ./assignment6                                                                             
-Enter a numerator: 24
-Enter a denominator: 8
-There is NOT a remainder!#
-p4n:~/LearningC/ # ./assignment6                                                                             
-Enter a numerator: 55
-Enter a denominator: 9
-There is a remainder!# 
+1. Write a Program to Make a Simple Calculator Using switch...case
+```
+Enter Number 1 : 23
+Enter Number 2 : 2
+
+Select Operator + , - , x , / , %
+ +
+
+--- Your Result is + : 25       
 ```
 
 
