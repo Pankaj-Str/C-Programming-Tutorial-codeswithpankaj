@@ -5,7 +5,7 @@ int main() {
     int age = 25;
     float salary = 5000.50;
     char initial = 'J';
-    char firstName[20] = "John";
+    char firstName[20] = "joy";
     
     printf("Personal Information:\n");
     printf("Name: %s\n", firstName);

@@ -110,7 +110,6 @@ This example showcases the usage of identifiers to represent different types of 
 Print "Hello, World!" to the terminal
 
 ## Example Output
-```terminal_session
-p4n:~/LearningC/ # ./assignment1                                        
-Hello, World!#
+```terminal_session                                       
+Hello, World!
 ```
