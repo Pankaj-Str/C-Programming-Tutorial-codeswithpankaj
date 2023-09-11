@@ -8,9 +8,11 @@ int main(){
     int n1;
     n1 = 100;
     printf("%d\n",n1);
-    // Compound Assignment Operators (+=, -=, *=, /=, %=): Performs an arithmetic operation and assigns the result to the left operand.
+    
+    // Compound Assignment Operators (+=, -=, *=, /=, %=): 
+    // Performs an arithmetic operation and assigns the result to the left operand.
 
-    //n1 = n1 + 10;
+    //n1 = n1 + 10; // output ; 110
     n1 += 10;
     printf("%d\n",n1);
      n1 -= 10;
@@ -21,7 +23,6 @@ int main(){
     printf("%d\n",n1);
      n1 %= 10;
     printf("%d\n",n1);
-
 
 
 return 0;
