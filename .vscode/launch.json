@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/workspaces/Learn-C-Programming-p4n.in/Day-06",
-      "program": "/workspaces/Learn-C-Programming-p4n.in/Day-06/build/Debug/outDebug",
+      "cwd": "/workspaces/Learn-C-Programming-p4n.in/Day-09",
+      "program": "/workspaces/Learn-C-Programming-p4n.in/Day-09/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
