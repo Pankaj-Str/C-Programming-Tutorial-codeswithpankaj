@@ -1,88 +1,59 @@
-# C Data Types
+# C - Variables
 
-Data types specify the type and size of data that can be stored in variables. C provides several built-in data types to accommodate different kinds of data. Here are some commonly used data types in C:
+In C programming, variables are used to store and manipulate data. A variable is essentially a named storage location in memory where you can store values of different data types. Here's how you declare and use variables in C:
 
-1. **Integer Types:**
-   - `int`: Represents signed integers, typically 4 bytes.
-   - `short`: Represents short signed integers, typically 2 bytes.
-   - `long`: Represents long signed integers, typically 4 or 8 bytes.
-   - `unsigned int`: Represents unsigned integers, typically 4 bytes.
-   - `unsigned short`: Represents unsigned short integers, typically 2 bytes.
-   - `unsigned long`: Represents unsigned long integers, typically 4 or 8 bytes.
-   - `char`: Represents characters or small integers, typically 1 byte.
-
-2. **Floating-Point Types:**
-   - `float`: Represents single-precision floating-point numbers, typically 4 bytes.
-   - `double`: Represents double-precision floating-point numbers, typically 8 bytes.
-
-3. **Void Type:**
-   - `void`: Represents the absence of any type. It is often used as a return type for functions that do not return a value or to indicate an empty parameter list.
-
-4. **Derived Types:**
-   - `arrays`: Represents a collection of elements of the same type.
-   - `pointers`: Stores the memory address of another variable.
-   - `structures`: Groups related data elements under a single name.
-   - `unions`: Allows different data types to be stored in the same memory location.
-   - `enumerations`: Defines a set of named integer constants.
-
-These are the fundamental data types in C, and additional data types can be defined using these basic types and derived types. Each data type has its own range of values and occupies a specific amount of memory.
-
-Here's an example that demonstrates the usage of some of these data types:
+1. **Variable Declaration**: To declare a variable, you specify its data type followed by the variable's name.
 
 ```c
-#include <stdio.h>
+int age; // Declares an integer variable named "age"
+float salary; // Declares a floating-point variable named "salary"
+char grade; // Declares a character variable named "grade"
+```
 
-int main() {
-    int age = 25;
-    float salary = 5000.50;
-    char grade = 'A';
-    double pi = 3.14159;
-    
-    printf("Age: %d\n", age);
-    printf("Salary: %.2f\n", salary);
-    printf("Grade: %c\n", grade);
-    printf("Pi: %.5f\n", pi);
-    
-    return 0;
+2. **Variable Initialization**: You can also initialize a variable when declaring it by assigning an initial value.
+
+```c
+int score = 95; // Declares and initializes an integer variable
+float pi = 3.14159265359; // Declares and initializes a float variable
+char letter = 'A'; // Declares and initializes a character variable
+```
+
+3. **Variable Assignment**: You can assign values to variables using the assignment operator (`=`).
+
+```c
+age = 25; // Assigns the value 25 to the "age" variable
+salary = 50000.50; // Assigns the value 50000.50 to the "salary" variable
+grade = 'B'; // Assigns the character 'B' to the "grade" variable
+```
+
+4. **Variable Naming Rules**:
+   - Variable names must start with a letter (uppercase or lowercase) or an underscore `_`.
+   - After the first character, variable names can contain letters, digits, and underscores.
+   - C is case-sensitive, so `age` and `Age` are treated as different variables.
+
+5. **Data Types**: Variables have associated data types that determine what kind of data they can store. Common data types include `int`, `float`, `char`, `double`, and custom data types created using `struct` or `enum`.
+
+6. **Scope**: The scope of a variable defines where in the program it can be used. For example, a variable declared within a function is usually local to that function, while a variable declared outside of any function (at the global scope) can be used throughout the program.
+
+```c
+int globalVar; // Global variable, accessible in all functions
+
+void someFunction() {
+    int localVar; // Local variable, only accessible within this function
 }
 ```
 
-In this example, we have variables of different data types: `age` (int), `salary` (float), `grade` (char), and `pi` (double). We use the `printf` function to display the values of these variables.
+7. **Constants**: In C, you can define constants using the `const` keyword. Constants are variables whose values cannot be changed once they are set.
 
-When the program runs, it will output:
-
-```
-Age: 25
-Salary: 5000.50
-Grade: A
-Pi: 3.14159
+```c
+const int MAX_VALUE = 100; // Declaring a constant
 ```
 
-This example showcases the usage of different data types in C programming to store and display different kinds of data.
+8. **Variable Size**: The size of a variable depends on its data type. You can use the `sizeof` operator to determine the size of a variable or data type in bytes.
 
-
-
-## Assignment 1
-Prompt the user to input their first and last name and then print them a welcome message. Try storing the input as a char variable's value.
-
-Easy Mode: Allocate an arbitrary amount of indices to your char array and pray to the gods that the user input fits.
-
-Extra Credit: Dynamically allocate the array size of your char variable based on the length of the user's input.
-
-## Example Output
-```terminal_session
-Enter your first name: pankaj
-Enter your last name: chouhan
-Hello pankaj chouhan
+```c
+int intSize = sizeof(int); // Gets the size of an int in bytes
 ```
 
+Variables are fundamental in C programming, and they allow you to store and manipulate data within your programs. Understanding data types, variable declaration, and assignment is crucial for writing C programs effectively.
 
-## Assignment 2
-
-Write a C program that takes n number of positive integers. Find the integer that appears the least number of times among the said integers. If there are multiple such integers, select the smallest one.
-## Example Output
-```terminal_session
-Sample Date:
-(1,2,3) -> 1
-(10, 20, 4, 5, 11) -> 4
-```
