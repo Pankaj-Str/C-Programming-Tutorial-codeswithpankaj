@@ -61,7 +61,7 @@
 5. Keywords:
    Keywords in C are reserved words that have predefined meanings and cannot be used as identifiers. Some common keywords in C include `if`, `else`, `while`, `int`, `float`, and `return`. These words are used for control flow, data types, and program structure.
 
-|    Keywords   |     |     |     |    Keywords   |     |     |     |
+
 |:-------------:|:---:|:---:|:---:|:-------------:|:---:|:---:|:---:|
 | auto          | break   | case     | char      | const         | continue | default | do        |
 | double        | else    | enum     | extern    | float         | for      | goto    | if        |
@@ -69,7 +69,7 @@
 | struct        | switch  | typedef  | union     | unsigned      | void     | volatile| while     |
 
 
-6. Whitespace in C:
+1. Whitespace in C:
    Whitespace refers to spaces, tabs, and newline characters in your code. In C, whitespace is used for formatting and readability but is generally ignored by the compiler. For example, you can use whitespace to format your code like this:
 
    ```c
