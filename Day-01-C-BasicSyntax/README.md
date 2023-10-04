@@ -61,7 +61,7 @@
 5. Keywords:
    Keywords in C are reserved words that have predefined meanings and cannot be used as identifiers. Some common keywords in C include `if`, `else`, `while`, `int`, `float`, and `return`. These words are used for control flow, data types, and program structure.
 
-
+|    Keywords   |     |     |     |       |     |     |     |
 |:-------------:|:---:|:---:|:---:|:-------------:|:---:|:---:|:---:|
 | auto          | break   | case     | char      | const         | continue | default | do        |
 | double        | else    | enum     | extern    | float         | for      | goto    | if        |
