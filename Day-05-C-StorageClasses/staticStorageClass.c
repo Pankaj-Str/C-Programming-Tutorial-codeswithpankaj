@@ -9,5 +9,6 @@ void function() {
 int main() {
     function();
     function();
+    function();
     return 0;
 }
