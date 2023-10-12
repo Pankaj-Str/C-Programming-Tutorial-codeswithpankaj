@@ -1,4 +1,4 @@
-# Interview questions
+# 100 Interview questions - 
 
 1. **Question 1:**
    **Question:** Write a C program that prints numbers from 1 to 10 using a `for` loop.
