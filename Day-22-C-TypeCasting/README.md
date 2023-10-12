@@ -1,37 +1,87 @@
-## Assignment 22
-More structs? God no, please no. I'm sorry, but yes. One more struct excercise. We're putting arrays in our structs, we're leveling up. 
+# C Type Casting
 
-The goal here is to create a program that takes input for five player's point totals and games played totals and then calculates the scoring averages for each player. Create a struct with members for total points and games played. Create an array of structures that is five elements deep (one for each player) and loop through the array filling it with the point totals and games played totals for each player. 
+Type casting in C is a process that allows you to convert a value from one data type to another. It is also known as data type conversion or type coercion. Type casting can be performed implicitly (automatic) or explicitly (manual) and is essential when working with different data types in C.
 
-This array of structs should look like this in pseudo code:
+## Implicit Type Casting (Type Coercion)
+
+Implicit type casting, also known as type coercion, occurs automatically by the C compiler when certain conditions are met. It involves converting one data type to another without explicit programmer intervention.
+
+### Widening Conversion
+
+Implicit type casting is common in "widening" or "promotion" conversions, where a value with a smaller data type is converted to a larger data type.
+
+For example, when you assign an `int` value to a `double` variable, the `int` value is implicitly cast to a `double`:
+
 ```c
-struct stats {
-  int points;
-  int games;
-};
-
-struct stats player[5];
+int x = 5;
+double y = x; // Implicitly converts int to double
 ```
 
-You can declare an `int` counter variable and use it to iterate through the array for both points and games. 
+### Mixing Data Types
 
-## Example Output
-```terminal_session
-p4n:~/LearningC/ # ./assignment22                                          
-Enter Player 1's point total: 44
-Enter Player 1's game total: 5
-Enter Player 2's point total: 21
-Enter Player 2's game total: 5
-Enter Player 3's point total: 33
-Enter Player 3's game total: 5
-Enter Player 4's point total: 67
-Enter Player 4's game total: 5
-Enter Player 5's point total: 8
-Enter Player 5's game total: 5
-Player 1's scoring average was 8.80 ppg.
-Player 2's scoring average was 4.20 ppg.
-Player 3's scoring average was 6.60 ppg.
-Player 4's scoring average was 13.40 ppg.
-Player 5's scoring average was 1.60 ppg.
+Implicit casting also occurs when you perform operations involving mixed data types. In such cases, the smaller data type is promoted to the larger data type before the operation.
+
+```c
+int a = 5;
+double b = 2.5;
+double result = a + b; // a is implicitly converted to double before addition
 ```
 
+## Explicit Type Casting
+
+Explicit type casting, also known as type conversion, is performed by the programmer to force a conversion from one data type to another. It involves using casting operators to specify the desired type.
+
+### Casting Operators
+
+C provides the following casting operators for explicit type casting:
+
+- `(type)` - The most common way to perform type casting is by using parentheses to enclose the target data type. For example:
+
+```c
+int x = 5;
+double y = (double)x; // Explicitly converts int to double
+```
+
+- `function-style` casting - This involves calling a casting function, such as `int()`, `double()`, or `char()`, to perform the conversion. For example:
+
+```c
+int x = 5;
+double y = double(x); // Explicitly converts int to double
+```
+
+### Type Conversion Functions
+
+C provides several standard functions to explicitly convert data types:
+
+- `int()` - Converts to an `int`.
+- `float()` - Converts to a `float`.
+- `double()` - Converts to a `double`.
+- `char()` - Converts to a `char`.
+
+## Example
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    double b = 3.14;
+    
+    double result = (double)a + b; // Explicitly converts int to double for addition
+    int integerResult = (int)(result); // Explicitly converts double to int
+    
+    printf("Result (double): %lf\n", result);
+    printf("Result (int): %d\n", integerResult);
+    
+    return 0;
+}
+```
+
+In this example:
+
+- We explicitly convert the `int` variable `a` to a `double` before addition.
+- We then explicitly convert the result back to an `int`.
+
+## Conclusion
+
+Type casting in C is a fundamental concept that allows you to convert values from one data type to another, either implicitly or explicitly. Understanding when and how to use type casting is essential for working with mixed data types and ensuring that your program behaves as expected when dealing with different types of data. Type casting is a powerful tool for controlling data conversions and ensuring that your code operates as intended.
