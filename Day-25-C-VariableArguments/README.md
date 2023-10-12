@@ -1,122 +1,69 @@
-## Assignment
-This assignment will pick up where we left off. We have successfully implemented an `open()` syscall and will now pair that with a `write()` sycall to insert text into our open file.
+# Variable Arguments in C
 
-## Getting Started
-Again, we will reference the noob friendly [codewiki](http://codewiki.wikidot.com/c:system-calls:write) site. 
+Variable arguments, often referred to as variadic functions, allow C functions to accept a variable number of arguments. This is useful when you want to create functions that can handle different numbers of inputs or provide optional parameters. In C, you can implement variable arguments using the `<stdarg.h>` library, which provides macros and functions for working with variable argument lists.
 
-## Write() Syscall
-Jumping right in, codewiki gives us the following functiond defintion: `ssize_t write(int fildes, const void *buf, size_t nbytes);`. It elaborates on the parameter values as follows: 
-+ `int fildes` - The file descriptor of where to write the output. You can either use a file descriptor obtained from the open system call, or you can use 0, 1, or 2, to refer to standard input, standard output, or standard error, respectively.
-+ `const void *buf` - A pointer to a buffer of at least nbytes bytes, which will be written to the file.
-+ `size_t nbytes` - The number of bytes to write. If smaller than the provided buffer, the output is truncated.
-+ return value - Returns the number of bytes that were written. If value is negative, then the system call returned an error.
+## Variadic Functions
 
-We already have the `int fildes` in our program saved as the value for our `filedescriptor` variable. 
+Variadic functions in C are defined using the `...` ellipsis syntax in the function parameter list. The ellipsis represents a variable number of arguments.
 
-`const void *buf` is the content we want to write to the file, in this case we will fill this paramter with the value "Writing test data to the file." 
-
-`size_t nbytes` is the number of bytes our message is. To calculate this let's just use Python in the terminal real quick:
-```terminal_session
-tokyo:~/LearningC/ # python                                          
-Python 2.7.15+ (default, Nov 28 2018, 16:27:22) 
-[GCC 8.2.0] on linux2
-Type "help", "copyright", "credits" or "license" for more information.
->>> string = "Writing test data to the file."
->>> print(len(string))
-30
->>>
-```
-
-Ok, so our message is 30 bytes long. At this point, we have everything we need to make a `write()` syscall. Our code now looks like this: 
-```terminal_session
-#include <stdio.h>
-#include <unistd.h>
-#include <fcntl.h>
-
-int main (void)
-{
-	int filedescriptor;
-
-	filedescriptor = open("testfile.txt", O_WRONLY | O_CREAT, S_IRWXU);
-
-	if (filedescriptor < 0)
-	{
-		printf("The open operation failed...");
-		return -1;
-	}
-	else 
-	{
-		printf("The open operation succeeded!");
-		
-	}
-
-	write(filedescriptor, "Writing test data to the file", 30);
-	
-}
-```
-
-If we run this, we see that our write operation succeeded!
-```terminal_session
-p4n:~/LearningC/ # gcc assignment25.c -o assignment25                       
-p4n:~/LearningC/ # ./assignment25                                          
-The open operation succeeded!#      
-p4n:~/LearningC/ # cat testfile.txt                   
-Writing test data to the file#
-```
-Awesome, now to build in some error handling. The codewiki page tells us that the return value is the number of bytes we wrote to the file, so we know that if we don't get a `30` return value, our operation didn't succeed. Let's add some logic to save the return value in the variable `writertn` and return a `-1` if it fails. 
-
-Our code now looks like this:
 ```c
 #include <stdio.h>
-#include <unistd.h>
-#include <fcntl.h>
+#include <stdarg.h>
 
-int main (void)
-{
-	int filedescriptor;
+int sum(int count, ...) {
+    int total = 0;
+    va_list args;
+    va_start(args, count);
+    for (int i = 0; i < count; i++) {
+        total += va_arg(args, int);
+    }
+    va_end(args);
+    return total;
+}
 
-	filedescriptor = open("testfile.txt", O_WRONLY | O_CREAT, S_IRWXU);
-
-	if (filedescriptor < 0)
-	{
-		printf("The open operation failed...");
-		return -1;
-	}
-	else 
-	{
-		printf("The open operation succeeded!\n");
-		
-	}
-
-	int writertn;
-
-	writertn = write(filedescriptor, "Writing test data to the file", 30);
-
-	if (writertn != 30)
-	{
-		printf("The write operation failed...");
-		return -1;
-	}
-	else
-	{
-		printf("The write operation succeeded!");
-	}
-
-	return 0;
-
+int main() {
+    int result1 = sum(3, 10, 20, 30);
+    int result2 = sum(4, 5, 15, 25, 35);
+    printf("Result 1: %d\n", result1);
+    printf("Result 2: %d\n", result2);
+    return 0;
 }
 ```
 
-Running the program seems to indicate successes with both operations:
-```terminal_session
-p4n:~/LearningC/ # ./assignment25                                 
-The open operation succeeded!
-The write operation succeeded!#                                                
-p4n:~/LearningC/ # cat testfile.txt                               
-Writing test data to the file#  
+In this example:
+
+- The `sum` function takes an integer `count` followed by an ellipsis `...`, which indicates that the function can accept a variable number of integer arguments.
+- Inside the function, we use macros and functions from `<stdarg.h>` to process the variable arguments.
+- We start the argument list with `va_start`, retrieve the arguments with `va_arg`, and end the argument list with `va_end`.
+
+## Variadic Macros
+
+Variadic macros were introduced in C99 and provide a way to create macros that can take a variable number of arguments. Variadic macros use the `...` syntax in their definition.
+
+```c
+#include <stdio.h>
+
+#define LOG(format, ...) printf(format, ##__VA_ARGS__)
+
+int main() {
+    int x = 42;
+    LOG("The value of x is %d\n", x);
+    LOG("Hello, %s! You have %d messages.\n", "Alice", 3);
+    return 0;
+}
 ```
 
-Now we just need to add a `close()` operation to our file so that our file is not left open, I'll leave this excercise to you!
+In this example:
 
+- The `LOG` macro is defined to take a format string followed by a variable number of arguments.
+- Variadic macros use `__VA_ARGS__` to represent the variable arguments.
+- The `##` operator is used to ensure that the comma before `__VA_ARGS__` is not included when no additional arguments are provided.
 
+## Variadic Functions vs. Variadic Macros
 
+- Variadic functions are used when you need to perform complex processing on variable arguments, such as iterating over them or validating their types.
+- Variadic macros are used when you want to create simple, text-based macro substitutions with variable arguments. They are useful for logging and debugging purposes.
+
+## Conclusion
+
+Variable arguments in C, whether implemented as variadic functions or variadic macros, provide flexibility when dealing with functions that accept a variable number of arguments. They are especially useful for creating more versatile and expressive functions and macros that can adapt to different input requirements or provide optional parameters. Understanding how to work with variable arguments using the `<stdarg.h>` library and variadic macros is an essential skill for C programmers.
