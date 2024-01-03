@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/workspaces/C-Programming-Tutorial/Day-07-C-DecisionMaking",
-      "program": "/workspaces/C-Programming-Tutorial/Day-07-C-DecisionMaking/build/Debug/outDebug",
+      "cwd": "/workspaces/C-Programming-Tutorial/Day-01-C-BasicSyntax",
+      "program": "/workspaces/C-Programming-Tutorial/Day-01-C-BasicSyntax/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
