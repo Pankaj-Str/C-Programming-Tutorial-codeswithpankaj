@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/workspaces/C-Programming-Tutorial/Day-12-C-Arrays/SingleArray",
-      "program": "/workspaces/C-Programming-Tutorial/Day-12-C-Arrays/SingleArray/build/Debug/outDebug",
+      "cwd": "/workspaces/C-Programming-Tutorial/Day-12-C-Arrays/MultiArray",
+      "program": "/workspaces/C-Programming-Tutorial/Day-12-C-Arrays/MultiArray/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
