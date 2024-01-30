@@ -15,10 +15,11 @@ int main()
       exit(1);             
    }
 
-   printf("Enter num: ");
-   scanf("%d",&num);
+   // printf("Enter num: ");
+   // scanf("%d",&num);
 
-   fprintf(fptr,"%d",num);
+   // fprintf(fptr,"%d",num);
+   fprintf(fptr,"welcome to codeswithpankaj.com");
    fclose(fptr);
 
    return 0;
