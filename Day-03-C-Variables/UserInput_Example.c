@@ -8,12 +8,12 @@ int main(void)
   int age;
   float height;
 
-  //prompt user to input first and last name and use scanf() to store those to the initiliazed vars
-  printf("Enter your name: \n");
-  scanf("%s", &name);
-  printf("Enter your Age: \n");
+  // user input 
+  printf("enter your name \n ");
+  scanf("%s",&name);
+  printf("enter your age \n");
   scanf("%d",&age);
-  printf("Enter your height: \n");
+  printf("enter your height \n");
   scanf("%f",&height);
   
 

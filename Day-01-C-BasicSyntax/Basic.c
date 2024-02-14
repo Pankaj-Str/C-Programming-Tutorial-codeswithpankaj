@@ -6,6 +6,6 @@ void main(){
     
     printf("%d\n",45);
 
-    // printf("%f\n",4.5);
+    printf("%f\n",4.5);
 
 }
