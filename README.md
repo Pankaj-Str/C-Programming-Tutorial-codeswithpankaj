@@ -3,44 +3,34 @@
 C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. C programming is an excellent language to learn to program for beginners.
 
 ```
-Day 1: Introduction
-C Intro
-C Get Started
-Day 2: Syntax and Variables
-C Syntax
-C Output
-C Comments
-C Variables
-C Data Types
-C Constants
-Day 3: Operators and Control Structures
-C Operators
-C Booleans
-C If...Else
-C Switch
-C While Loop
-C For Loop
-C Break/Continue
-Day 4: Arrays and Strings
-C Arrays
-C Strings
-C User Input
-Day 5: Memory Management and Pointers
-C Memory Address
-C Pointers
-Day 6: Functions and Function Parameters
-C Functions
-C Function Parameters
-Day 7: Function Declaration and Recursion
-C Function Declaration
-C Recursion
-Day 8: Math Functions and Files
-C Math Functions
-C Files
-C Create Files
-C Write To Files
-C Read Files
-Day 9: Structures and Enums
-C Structures
-C Enums
+
+| Day | Topic                   |
+|-----|-------------------------|
+| 01  | Introduction            |
+| 02  | Data Types              |
+| 03  | Variables               |
+| 04  | Constants               |
+| 05  | Storage Classes         |
+| 06  | Operators               |
+| 07  | Decision Making         |
+| 08  | Loops                   |
+| 09  | Functions               |
+| 10  | Scope Rules             |
+| 11  | Structures              |
+| 12  | Arrays                  |
+| 13  | Pointers                |
+| 14  | Strings                 |
+| 15  | Unions                  |
+| 16  | Bit Fields              |
+| 17  | Typedef                 |
+| 18  | Input & Output          |
+| 19  | File I/O                |
+| 20  | Preprocessors           |
+| 21  | Header Files            |
+| 22  | Type Casting            |
+| 23  | Error Handling          |
+| 24  | Recursion               |
+| 25  | Variable Arguments      |
+| 26  | Memory Management       |
+| 27  | Command Line Arguments  |
 ```
