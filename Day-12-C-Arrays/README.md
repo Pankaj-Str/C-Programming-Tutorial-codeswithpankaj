@@ -249,3 +249,21 @@ When working with arrays in C, consider the following best practices:
 7. **Use Standard Library Functions:** The C standard library provides various functions for working with arrays, such as `memcpy`, `memcmp`, and `qsort`. These functions are often optimized for performance and reliability, so consider using them when appropriate.
 
 
+## Assignment
+
+#### Write a Code to Sum of array elements (user input:
+
+```c
+// example 
+
+
+[1,2,3,4,5,6,7,8,9,10]
+total = 55
+
+
+```
+
+
+
+
+
