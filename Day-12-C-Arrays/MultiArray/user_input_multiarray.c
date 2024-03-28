@@ -2,41 +2,34 @@
 
 int main(){
 
-    int row,col;
-    printf("Enter row \n ");
-    scanf("%d",&row);
-    printf("Enter Column \n ");
-    scanf("%d",&col);
+    // user input row and colmun
+    int row, col;
+    printf("Enter the number of rows: ");
+    scanf("%d", &row);
+    printf("Enter the number of columns: ");
+    scanf("%d", &col);
 
-    int data[col][row];
+    // create a multi array
 
-    for (int i = 0; i < col; i++)
-    {
+    int data[row][col];
 
-        for (int a = 0; a < row; a++)
-        {
-            printf("Enter elements into array = %d %d\n",a,i);
-            scanf("%d",&data[i][a]);
+    // assign values to the array
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            printf("Enter the value for data[%d][%d]: ", i, j);
+            scanf("%d", &data[i][j]);
         }
-        
-
-        printf("\n");
     }
 
-     printf("\n ---------------------------- \n");
+    // print the array using nested for loop
+    printf("\n ---------------------- \n");
 
-    for (int i = 0; i < col; i++)
-    {
-
-        for (int a = 0; a < row; a++)
-        {
-            printf(" %d",data[i][a]);
+    for(int i=0; i<row; i++){
+        for(int j=0; j<col; j++){
+            printf("%d ", data[i][j]);
         }
-        
-
         printf("\n");
-    }
-    
+    }   
 
 
     return 0;
