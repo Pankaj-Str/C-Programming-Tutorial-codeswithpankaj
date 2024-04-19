@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/workspaces/C-Programming-Tutorial/Day-11-C-Structures",
-      "program": "/workspaces/C-Programming-Tutorial/Day-11-C-Structures/build/Debug/outDebug",
+      "cwd": "/workspaces/C-Programming-Tutorial/Examples/Function",
+      "program": "/workspaces/C-Programming-Tutorial/Examples/Function/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
