@@ -1,19 +1,31 @@
 #include<stdio.h>
 
-// C Program to illustrate the structure without bit field
+// Bit Fields Example
 
-// A simple representation of the date
-struct date {
-	unsigned int d;
-	unsigned int m;
-	unsigned int y;
+struct student
+{
+    char name[50];
+    int roll;
+    float marks;
+    int age : 5;
 };
 
 int main()
 {
-	// printing size of structure
-	printf("Size of date is %lu bytes\n",
-		sizeof(struct date));
-	struct date dt = { 31, 12, 2014 };
-	printf("Date is %d/%d/%d", dt.d, dt.m, dt.y);
+    struct student s1;
+    printf("Enter the name: ");
+    scanf("%s", s1.name);
+    printf("Enter the roll number: ");
+    scanf("%d", &s1.roll);
+    printf("Enter the marks: ");
+    scanf("%f", &s1.marks);
+    printf("Enter the age: ");
+    scanf("%d", &s1.age);
+    
+    printf("Name: %s\n", s1.name);
+    printf("Roll Number: %d\n", s1.roll);
+    printf("Marks: %f\n", s1.marks);
+    printf("Age: %d\n", s1.age);
+    
+    return 0;
 }

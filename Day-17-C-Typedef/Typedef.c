@@ -13,7 +13,7 @@ typedef struct students {
 int main()
 {
 	stu st;
-	strcpy(st.name, "Kamlesh Joshi");
+	strcpy(st.name, "joy");
 	strcpy(st.branch, "Computer Science And Engineering");
 	st.ID_no = 108;
 
