@@ -25,7 +25,7 @@ int main(){
         printf("Try 1/1 More Time \n");
         printf("Confirm Your Password ");
         scanf("%s",c_pwd);
-    }if(value != 0){
+    }else if(value != 0){
         printf("Password Not Matched \n");
         printf("Try 0/0 More Time \n");
         printf("Confirm Your Password ");
