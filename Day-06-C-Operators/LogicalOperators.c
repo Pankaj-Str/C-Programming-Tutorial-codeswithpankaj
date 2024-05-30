@@ -9,6 +9,7 @@ int main(){
         //      F    |     F      =   F
 
         printf("%d\n",(23 < 89 && 56 == 90));
+        //                t           f      =  f
 
         // or ||
 
@@ -20,9 +21,11 @@ int main(){
         //      F    |     F      =   F
 
          printf("%d\n",(23 < 89 || 56 == 90));
+         //                t           f      =  t
 
         // not !
 
          printf("%d\n",(56 != 90));
+         //                t
     return 0;
 }

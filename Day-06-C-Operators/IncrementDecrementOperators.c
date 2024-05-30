@@ -8,7 +8,7 @@ int main(){
 
     printf("%d\n",number);
 
-     number--;
+    number--;
 
     printf("%d\n",number);
 
