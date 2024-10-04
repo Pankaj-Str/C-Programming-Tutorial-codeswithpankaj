@@ -23,6 +23,17 @@ int main(){
     }
     
 
+    printf("\n------------------output-------------------------------\n");
+
+    for(int a = 0 ; a < size ; a++){
+        printf("Element %d = %d \n",a+1,data[a]);
+    }
+    
+    
+
+
+
+
 
 
 
