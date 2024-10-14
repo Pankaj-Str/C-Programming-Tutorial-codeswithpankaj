@@ -6,11 +6,11 @@ struct Address {
     int zip;
 };
 
-struct Person {
+ Person {
     char name[50];
     int age;
     struct Address address;
-};
+};struct
 
 int main() {
     struct Person person = {"Nishant", 28, {"123 Maple St", "Springfield", 12345}};
