@@ -11,9 +11,11 @@ int main(){
     scanf("%d", &number2);
 
     if (number1 < number2){
+        // true section
         printf("%d is the smallest number\n", number1);
     }
     else{
+        // false section
         printf("%d is the smallest number\n", number2);
     }
 
